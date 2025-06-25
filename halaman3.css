@@ -1,0 +1,167 @@
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.navbar{
+    widht: 100%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 75px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.navbar .navbar-logo h1{
+    font-size: 35px;
+    color : white;
+}
+.navbar .navbar-logo .tec{
+    color: rgb(255, 153, 0)
+}
+.navbar ul{
+    list-style: none;
+    gap: 25px;
+    display: flex;
+}
+.navbar ul li{
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+}
+.navbar ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 5px;
+    background-color: darkgoldenrod;
+    transition: 0.3s ease;
+}
+.navbar ul li a:hover{
+    color: rgb(255, 153, 0)
+}
+.home{
+    background-image: url(gambarhp.png);
+    background-repeat: no repeat;
+    background-size: cover;
+    background-position: center;
+    position: center;
+    min-height: 100vh;
+}
+.products-container {
+    padding: 50px 75px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    animation: fadeIn 1s ease-in;
+}
+.product-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+}
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.product-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: rgb(255, 153, 0);
+}
+.product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    margin-bottom: 15px;
+}
+.product-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.product-button {
+    background: rgb(255, 153, 0);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+.product-button:hover {
+    background: rgb(255, 118, 38);
+}
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 75px;
+    flex-wrap: wrap;
+}
+.category-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: rgb(255, 136, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.category-button ul{
+    list-style: none;
+}
+.category-button ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.category-button:hover, .category-button.active {
+    background: rgb(255, 153, 0);
+    color: black;
+}
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: rgb(255, 153, 0);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .products-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    }
+
+    .category-filter {
+        padding: 15px;
+        }
+            
+    .page-title {
+        font-size: 2rem;
+        }
+}
